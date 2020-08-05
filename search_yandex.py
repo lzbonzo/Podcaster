@@ -19,3 +19,12 @@ def send_url_yandex(message, search_type='podcasts'):
         for url in urls:
             url = 'https://music.yandex.ru' + url
             bot.send_message(message.chat.id, url)
+            # print(url)
+
+# https://music.yandex.ru/search?text=Сережа%20и%20микрофон&type=podcasts
+# type_test = 'podcast_episode'
+# message_test = 'sdfdsfsfSFSFD'
+#
+# message_test = 'сережа'
+# type_test = 'podcast_episode'
+# send_url_yandex(message_test, 'podcast_episode')

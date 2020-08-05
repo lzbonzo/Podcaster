@@ -15,7 +15,15 @@ def send_url_apple(message, search_type='podcast'):
     # Проверяем на наличие результатов
     if json_search['resultCount'] == 0:
         bot.send_message(message.chat.id, 'Похоже в Apple еще не подвезли подкасты на эту тему')
+        # print('Похоже в Apple еще не подвезли подкасты на эту тему')
     else:
         for res in json_search['results']:
             if res['kind'] in kind:
                 bot.send_message(message.chat.id, res['collectionViewUrl'])
+                # print(res['collectionName'])
+                # print(res['trackViewUrl'])
+
+# # For test
+# message_test = 'сережа'
+# type_test = 'podcast'
+# send_url_apple(message_test, type_test)
