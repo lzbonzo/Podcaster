@@ -57,7 +57,7 @@ def callback_inline(call):
 
 @bot.add_channel_post_handler
 def check():
-    if time.strftime('%H:%M') == '15:40':
+    if time.strftime('%H:%M') == '15:42':
         bot.send_message(chat_id='@roman_allaberdin', text='Я жив!')
 
 
