@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+import time
 
 import config
 import flask
@@ -52,6 +53,14 @@ def callback_inline(call):
                 search_yandex.send_url_yandex(request_word)
     except Exception as e:
         print(repr(e))
+
+
+@bot.add_channel_post_handler
+def check():
+    if time.strftime('%H:%M') == '15:36':
+        bot.send_message(chat_id='@roman_allaberdin', text='Я жив!')
+
+
 
 
 if __name__ == '__main__':
