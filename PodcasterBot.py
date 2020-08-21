@@ -98,6 +98,6 @@ def schedule_checker():
 
 
 if __name__ == '__main__':
-    schedule.every().day.at("21:35").do(check)  # Если бот жив, то он присылает мне сообщение в 10 утра
+    schedule.every().day.at("10:00").do(check)  # Если бот жив, то он присылает мне сообщение в 10 утра
     Thread(target=schedule_checker).start()
     bot.polling(none_stop=True, interval=0)
